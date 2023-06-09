@@ -1,6 +1,7 @@
 import json
 from django.http import JsonResponse
 from rest_framework import status
+from rest_framework.renderers import JSONRenderer
 from rest_framework.response import Response
 from rest_framework.mixins import ListModelMixin, CreateModelMixin, DestroyModelMixin, RetrieveModelMixin, UpdateModelMixin
 from .models import Person, Group
@@ -42,28 +43,7 @@ class GroupView(RetrieveModelMixin, ListModelMixin, DestroyModelMixin, CreateMod
     def delete(self, request, *args, **kwargs):
         return self.destroy(request, *args, **kwargs)
 
-def api_home(request, *arg, **kwargs):
-    body = request.body
-    data = {}
-    try:
-        data = json.loads(body)
-    except:
-        pass
-    data['nombre'] = request.GET['nombre']
-    print(data['nombre'])
-    return JsonResponse({
-        'message': data['nombre']
-    })
+def api_home(request, group_id):
+    queryset = Person.objects.filter(group = group_id)
+    return JsonResponse(PersonSerializer(queryset, many=True).data, safe=False)
 
-def api_home(request, *arg, **kwargs):
-    body = request.body
-    data = {}
-    try:
-        data = json.loads(body)
-    except:
-        pass
-    data['nombre'] = request.GET['nombre']
-    print(data['nombre'])
-    return JsonResponse({
-        'message': data['nombre']
-    })
