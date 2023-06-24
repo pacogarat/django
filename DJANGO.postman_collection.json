@@ -1,0 +1,267 @@
+{
+	"info": {
+		"_postman_id": "b6e146a5-ae3d-48f5-9f37-a191e181f64c",
+		"name": "DJANGO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Person",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api_view/person/f730d55e-eb64-49e8-8b4d-c09f167d40dc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api_view",
+						"person",
+						"f730d55e-eb64-49e8-8b4d-c09f167d40dc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Person",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"first_name\": \"Fabian\",\n        \"last_name\": \"Perez\",\n        \"group\": \"f608ffdf-4980-4874-bb20-7e38d1eebd3c\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api_view/person/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api_view",
+						"person",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LIST Person",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api_view/persons/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api_view",
+						"persons",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Person",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api_view/person/f730d55e-eb64-49e8-8b4d-c09f167d40dc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api_view",
+						"person",
+						"f730d55e-eb64-49e8-8b4d-c09f167d40dc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Person",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"first_name\": \"Pececito\",\n        \"group\": null\n    }\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api_view/person/ef0a3947-d235-427b-a1df-533caddf660c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api_view",
+						"person",
+						"ef0a3947-d235-427b-a1df-533caddf660c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LIST Group ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api_view/groups/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api_view",
+						"groups",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Group ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api_view/group/f608ffdf-4980-4874-bb20-7e38d1eebd3c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api_view",
+						"group",
+						"f608ffdf-4980-4874-bb20-7e38d1eebd3c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Group",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"name\": \"Grupo 2\"        \n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api_view/group/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api_view",
+						"group",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Group",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"name\": \"Grupo 2.1\"        \n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api_view/group/26980ae0-e35f-4b80-961c-1d99eefb82bf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api_view",
+						"group",
+						"26980ae0-e35f-4b80-961c-1d99eefb82bf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LIST PEOPLE BY GROUP_ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"name\": \"Grupo 2.1\"        \n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api_view/people_in_group/f608ffdf-4980-4874-bb20-7e38d1eebd3c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api_view",
+						"people_in_group",
+						"f608ffdf-4980-4874-bb20-7e38d1eebd3c"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
