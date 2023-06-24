@@ -14,7 +14,7 @@ class PersonView(RetrieveModelMixin, ListModelMixin, DestroyModelMixin, CreateMo
     queryset = Person.objects.all()
     serializer_class = PersonSerializer
     lookup_field = 'id'
-    authentication_classes = [authentication.SessionAuthentication, authentication.TokenAuthentication]
+    authentication_classes = [authentication.SessionAuthentication, authentication.]
     permission_classes = [permissions.IsAuthenticated]
     def get(self, request, *args, **kwargs):
         return self.retrieve(request, *args, *kwargs)
